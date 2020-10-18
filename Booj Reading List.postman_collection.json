@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "b83ad335-eb7b-42e5-ba8c-0cbe972b7a35",
+		"name": "Booj Reading List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{url}}/api/books?name=The Lies of Locke Lamora&isbn=9780553588941&coverPath=https://covers.openlibrary.org/b/id/373479-M.jpg&author=Scott Lynch&publisher=Spectra&publishDate=June 26, 2007",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5fcc60e6-6562-449a-bb0e-2e57cc3b8c74",
+						"exec": [
+							"// tests reponse status",
+							"pm.test(\"Successful POST request\", function() {",
+							"   pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+							"});",
+							"",
+							"// tests response time",
+							"pm.test(\"Response time is less than 2000ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"})",
+							"",
+							"// tests response validity and body presence",
+							"pm.test(\"Response is valid and has a body\", function() {",
+							"    // asserts that status code is 201",
+							"    pm.response.to.be.success;",
+							"    // asserts that response has a valid JSON body",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"})",
+							"",
+							"// tests whether content-type header is present",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/books?name=The Lies of Locke Lamora&isbn=9780553588941&title=The Lies of Locke Lamora&coverPath=https://covers.openlibrary.org/b/id/373479-M.jpg&author=Scott Lynch&publisher=Spectra&publishDate=June 26, 2007",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "The Lies of Locke Lamora"
+						},
+						{
+							"key": "isbn",
+							"value": "9780553588941"
+						},
+						{
+							"key": "title",
+							"value": "The Lies of Locke Lamora"
+						},
+						{
+							"key": "coverPath",
+							"value": "https://covers.openlibrary.org/b/id/373479-M.jpg"
+						},
+						{
+							"key": "author",
+							"value": "Scott Lynch"
+						},
+						{
+							"key": "publisher",
+							"value": "Spectra"
+						},
+						{
+							"key": "publishDate",
+							"value": "June 26, 2007"
+						}
+					]
+				},
+				"description": "Stores a new Book resource in the Collection of Books in the database.\n\nUses \"The Lies of Locke Lamora\" book in this example."
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/api/books?name=To Kill a Mockingbird&isbn=9780060935467&title=To Kill a Mockingbird&coverPath=https://covers.openlibrary.org/b/id/8758697-M.jpg&author=Harper Lee&publisher=Perennial Classics&publishDate=2002",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "18af4e53-5f8d-4d31-81a4-62d656d72861",
+						"exec": [
+							"// tests reponse status",
+							"pm.test(\"Successful POST request\", function() {",
+							"   pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+							"});",
+							"",
+							"// tests response time",
+							"pm.test(\"Response time is less than 2000ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"})",
+							"",
+							"// tests response validity and body presence",
+							"pm.test(\"Response is valid and has a body\", function() {",
+							"    // asserts that status code is 201",
+							"    pm.response.to.be.success;",
+							"    // asserts that response has a valid JSON body",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"})",
+							"",
+							"// tests whether content-type header is present",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/books?name=To Kill a Mockingbird&isbn=9780060935467&title=To Kill a Mockingbird&coverPath=https://covers.openlibrary.org/b/id/8758697-M.jpg&author=Harper Lee&publisher=Perennial Classics&publishDate=2002",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "To Kill a Mockingbird"
+						},
+						{
+							"key": "isbn",
+							"value": "9780060935467"
+						},
+						{
+							"key": "title",
+							"value": "To Kill a Mockingbird"
+						},
+						{
+							"key": "coverPath",
+							"value": "https://covers.openlibrary.org/b/id/8758697-M.jpg"
+						},
+						{
+							"key": "author",
+							"value": "Harper Lee"
+						},
+						{
+							"key": "publisher",
+							"value": "Perennial Classics"
+						},
+						{
+							"key": "publishDate",
+							"value": "2002"
+						}
+					]
+				},
+				"description": "Stores a new Book resource in the Collection of Books in the database.\n\nUses \"To Kill a Mockingbird\" book in this example."
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/api/books?name=A Man Called Ove&isbn=9781476738024&title=A Man Called Ove&coverPath=https://covers.openlibrary.org/b/id/8314262-M.jpg&author=Fredrik Backman&publisher=Washington Square Press&publishDate=May 05, 2015",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0dc0e7b5-b117-46c0-b7c9-7a16ebf6cb53",
+						"exec": [
+							"// tests reponse status",
+							"pm.test(\"Successful POST request\", function() {",
+							"   pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+							"});",
+							"",
+							"// tests response time",
+							"pm.test(\"Response time is less than 2000ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"})",
+							"",
+							"// tests response validity and body presence",
+							"pm.test(\"Response is valid and has a body\", function() {",
+							"    // asserts that status code is 201",
+							"    pm.response.to.be.success;",
+							"    // asserts that response has a valid JSON body",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"})",
+							"",
+							"// tests whether content-type header is present",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/books?name=A Man Called Ove&isbn=9781476738024&title=A Man Called Ove&coverPath=https://covers.openlibrary.org/b/id/8314262-M.jpg&author=Fredrik Backman&publisher=Washington Square Press&publishDate=May 05, 2015",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "A Man Called Ove"
+						},
+						{
+							"key": "isbn",
+							"value": "9781476738024"
+						},
+						{
+							"key": "title",
+							"value": "A Man Called Ove"
+						},
+						{
+							"key": "coverPath",
+							"value": "https://covers.openlibrary.org/b/id/8314262-M.jpg"
+						},
+						{
+							"key": "author",
+							"value": "Fredrik Backman"
+						},
+						{
+							"key": "publisher",
+							"value": "Washington Square Press"
+						},
+						{
+							"key": "publishDate",
+							"value": "May 05, 2015"
+						}
+					]
+				},
+				"description": "Stores a new Book resource in the Collection of Books in the database.\n\nUses \"A Man Called Ove\" book in this example."
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/api/books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "820f36ce-d749-44b3-94e4-9c5a45084f4a",
+						"exec": [
+							"// tests reponse status",
+							"pm.test(\"Successful GET response\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// tests response time",
+							"pm.test(\"Response time is less than 2000ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"})",
+							"",
+							"// tests response validity and body presence",
+							"pm.test(\"Response is valid and has a body\", function() {",
+							"    // asserts that status code is 201",
+							"    pm.response.to.be.success;",
+							"    // asserts that response has a valid JSON body",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"})",
+							"",
+							"// tests whether content-type header is present",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"books"
+					]
+				},
+				"description": "Displays the collection of Book resources in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/api/books/{{id}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "11dc1754-15ea-4d85-9b6d-f560f882b8c2",
+						"exec": [
+							"// tests reponse status",
+							"pm.test(\"Successful GET response\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// tests response time",
+							"pm.test(\"Response time is less than 2000ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"})",
+							"",
+							"// tests response validity and body presence",
+							"pm.test(\"Response is valid and has a body\", function() {",
+							"    // asserts that status code is 201",
+							"    pm.response.to.be.success;",
+							"    // asserts that response has a valid JSON body",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"})",
+							"",
+							"// tests whether content-type header is present",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/books/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"books",
+						"{{id}}"
+					]
+				},
+				"description": "Displays a Book resource from a specified position in the Collection."
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/api/books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bafb4731-c678-4744-a3e1-8bec617c1d8b",
+						"exec": [
+							"// tests reponse status",
+							"pm.test(\"Successful DELETE response\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"",
+							"// tests response time",
+							"pm.test(\"Response time is less than 2000ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"})",
+							"",
+							"// tests if body was returned",
+							"pm.test(\"Response has no body\", function() {",
+							"    pm.expect([]).to.be.empty;",
+							"})",
+							"",
+							"// tests whether content-type header is present",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/books",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"books"
+					]
+				},
+				"description": "Removes all Book resources from whole Book collection in the database."
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/api/books/{{id}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "02043da4-a227-4235-9d33-e187a592ea44",
+						"exec": [
+							"// tests reponse status",
+							"pm.test(\"Successful DELETE response\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"",
+							"// tests response time",
+							"pm.test(\"Response time is less than 2000ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"})",
+							"",
+							"// tests if body was returned",
+							"pm.test(\"Response has no body\", function() {",
+							"    pm.expect([]).to.be.empty;",
+							"})",
+							"",
+							"// tests whether content-type header is present",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/books/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"books",
+						"{{id}}"
+					]
+				},
+				"description": "Removes Book resource in the specified position from whole Book collection in the database."
+			},
+			"response": []
+		}
+	]
+}
