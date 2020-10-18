@@ -1,6 +1,3 @@
-# Booj Reading List
-Website Link: https://booj-reading-list.herokuapp.com/
-
 *Beware of the person of one book. -- Thomas Aquinas*
 ## Prompt/Tasks
 Compose a site using the [Laravel](https://laravel.com/) or Vue framework that allows the user to create a list of books they would like to read. Users should be able to perform the following actions:
