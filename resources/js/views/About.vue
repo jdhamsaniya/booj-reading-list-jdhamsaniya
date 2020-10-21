@@ -7,7 +7,7 @@
       </div>
     </section>
     <div id="content">
-      <p class="githubInfo">Please go <a href="https://github.com/aanthos/Booj-Reading-List-Laravel">here</a> to get more in-depth information on:</p>
+      <p class="githubInfo">Please go <a href="https://github.com/jdhamsaniya/booj-reading-list-jdhamsaniya">here</a> to get more in-depth information on:</p>
       <ul>
         <li>Basic layout for the Vue application</li>
         <li>Vue application modules used such as vue-router</li>
