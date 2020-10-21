@@ -4,8 +4,7 @@
       <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand">Reading List</a>
         <div id="routers">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link>
+          <router-link to="/">Home</router-link>
         </div>
       </nav>
       
